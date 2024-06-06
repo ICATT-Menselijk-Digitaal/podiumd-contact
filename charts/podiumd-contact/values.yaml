@@ -1,0 +1,257 @@
+# Global settings
+global:
+  postgresql:
+    auth:
+      username: "kiss.bff"
+      password: "ChangeThis"  # replace with the actual password or use a secret management tool
+      database: "kiss.bff"
+      postgresPassword: "ChangeThis"
+
+env: dev
+
+namespace: kiss-namespace
+tlsSecret:
+  name: wildcard-kiss-tls
+  cert: "__dev-kiss-demo_nl.crt"
+  key: "kiss-dev-private.key"
+
+kibanaHost: "kibana.dev.kiss-demo.nl"
+postgresPassword: "ChangeThis"
+
+imageTag: "main-latest"
+ingressHost: "www.my-website.nl"
+ingressSecretName: "the-name-of-the-secret-in-kubernetes-to-use-for-tls"
+ESUITE_BASE_URL: "https://dmidoffice2.esuite-development.net"
+eSuiteClientId: "kiss"
+eSuiteClientSecret: "esuite-client-secret"
+clients0Id: "kiss"
+clients0Secret: "clienr-0-secret"
+clients1Id: "elastic-sync"
+clients1Secret: "client-1-secret"
+contactVerzoekType1: "Terugbelverzoek"
+interneTaakObjectTypeUrl: "https://www.my-obect-types-registration.nl/api/v2/objecttypes/1df73259-1a58-4180-bf98-598eefc184d4"
+afdelingenObjectTypeUrl: "https://www.my-obect-types-registration.nl/api/v2/objecttypes/ec65c0be-5e8d-4b72-b07f-7c4f78c84a18"
+groepenObjectTypeUrl: "https://www.my-obect-types-registration.nl/api/v2/objecttypes/8b9d6bf9-7b5a-4c38-ad10-f37cd1e81a8f"
+smoelenboekObjectTypeUrl: "https://www.my-obect-types-registration.nl/api/v2/objecttypes/748dd17b-2eb6-4084-95f0-a9040e27dced"
+afdelingenBaseUrl: "https://www.my-objects-registration.nl"
+afdelingenToken: "afdeling-token"
+groepenBaseUrl: "https://www.my-objects-registration.nl"
+groepenToken: "groep-token"
+smoelenboekBaseUrl: "https://www.my-objects-registration.nl"
+smoelenboekToken: "smoelen-token"
+ESUITE_CONTACTMOMENTEN_BASE_URL: "https://example.com/"
+ESUITE_KLANTEN_BASE_URL: "https://example.com/"
+
+AFDELINGEN_BASE_URL: "https://example.com/afdelingen"
+AFDELINGEN_OBJECT_TYPE_URL: "https://example.com/afdelingen/objectType"
+ASPNETCORE_ENVIRONMENT: "Development"
+CONTACTMOMENTEN_API_CLIENT_ID: "client-id"
+CONTACTMOMENTEN_BASE_URL: "https://example.com/contactmomenten"
+ELASTIC_BASE_URL: "https://example.com/elastic"
+ELASTIC_USERNAME: "elastic-user"
+EMAIL_ENABLE_SSL: "true"
+EMAIL_HOST: "smtp.example.com"
+EMAIL_PORT: "587"
+EMAIL_USERNAME: "email@example.com"
+ENTERPRISE_SEARCH_BASE_URL: "https://example.com/enterprise-search"
+ENTERPRISE_SEARCH_ENGINE: "engine-name"
+FEEDBACK_EMAIL_FROM: "feedback@example.com"
+FEEDBACK_EMAIL_TO: "admin@example.com"
+GROEPEN_BASE_URL: "https://example.com/groepen"
+GROEPEN_OBJECT_TYPE_URL: "https://example.com/groepen/objectType"
+HAAL_CENTRAAL_BASE_URL: "https://example.com/haalcentraal"
+INTERNE_TAAK_BASE_URL: "https://example.com/interne-taak"
+INTERNE_TAAK_OBJECT_TYPE_URL: "https://example.com/interne-taak/objectType"
+KLANTEN_BASE_URL: "https://example.com/klanten"
+KLANTEN_CLIENT_ID: "client-id"
+KVK_BASE_URL: "https://example.com/kvk"
+MEDEWERKER_OBJECTEN_BASE_URL: "https://example.com/medewerker-objecten"
+MEDEWERKER_OBJECTTYPES_BASE_URL: "https://example.com/medewerker-objecttypes"
+OIDC_AUTHORITY: "https://login.microsoftonline.com/0571c846-217a-43f0-baa6-a9f8a19865a8/v2.0"
+OIDC_CLIENT_ID: "f73cab23-1291-40c3-b2ba-263634ddd262"
+OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM: "sub"
+OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE: "false"
+ORGANISATIE_IDS: "org-ids"
+POSTGRES_DB: "kiss.bff"
+POSTGRES_HOST: "podiumd-contact-postgresql.kiss-namespace.svc.cluster.local"
+POSTGRES_USER: "kiss.bff"
+SDG_BASE_URL: "https://example.com/sdg"
+SDG_OBJECTEN_BASE_URL: "https://example.com/sdg/objecten"
+SDG_OBJECT_TYPE_URL: "https://example.com/sdg/objectType"
+VAC_OBJECTEN_BASE_URL: "https://example.com/vac/objecten"
+VAC_OBJECTTYPES_BASE_URL: "https://example.com/vac/objecttypes"
+ZAKEN_API_CLIENT_ID: "zaken-client-id"
+ZAKEN_BASE_URL: "https://example.com/zaken"
+ZAAKSYSTEEM_DEEPLINK_URL: "https://example.com/zaaksysteem"
+ZAAKSYSTEEM_DEEPLINK_PROPERTY: "property-name"
+
+AFDELINGEN_TOKEN: "afdelingen-token"
+CONTACTMOMENTEN_API_KEY: "contactmomenten-api-key"
+ELASTIC_PASSWORD: "elastic-password"
+EMAIL_PASSWORD: "email-password"
+ENTERPRISE_SEARCH_PRIVATE_API_KEY: "private-api-key"
+ENTERPRISE_SEARCH_PUBLIC_API_KEY: "public-api-key"
+GROEPEN_TOKEN: "groepen-token"
+HAAL_CENTRAAL_API_KEY: "haalcentraal-api-key"
+INTERNE_TAAK_TOKEN: "interne-taak-token"
+KLANTEN_CLIENT_SECRET: "klanten-client-secret"
+KVK_API_KEY: "kvk-api-key"
+MEDEWERKER_OBJECTEN_TOKEN: "medewerker-objecten-token"
+MEDEWERKER_OBJECTTYPES_TOKEN: "medewerker-objecttypes-token"
+OIDC_CLIENT_SECRET: "oidc-client-secret"
+SDG_OBJECTEN_TOKEN: "sdg-objecten-token"
+VAC_OBJECTEN_TOKEN: "vac-objecten-token"
+VAC_OBJECTTYPES_TOKEN: "vac-objecttypes-token"
+ZAKEN_API_KEY: "zaken-api-key"
+
+kiss-frontend:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/klantinteractie-servicesysteem/kiss-frontend
+    pullPolicy: IfNotPresent
+    tag: "latest"
+  imagePullSecrets: []
+  nameOverride: "kiss-frontend"
+  fullnameOverride: "kiss-frontend"
+  service:
+    type: ClusterIP
+    port: 8080
+  ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 32k #ivm azure open id connect > nginx default buffer 8k te laag
+  hosts:
+    - host: www.my-website.nl
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+          serviceName: kiss-frontend
+          servicePort: 8080
+  tls:
+    - hosts:
+        - www.my-website.nl
+      secretName: wildcard-kiss-tls
+  resources:
+    {}
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 100
+    targetCPUUtilizationPercentage: 80
+  nodeSelector: {}
+  tolerations: []
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - kiss-frontend
+          topologyKey: "kubernetes.io/hostname"
+  env:
+    config:
+      ASPNETCORE_ENVIRONMENT: Production
+  postgresql:
+    enabled: true
+    service:
+      port: 5432
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  cronjobs: []
+
+podiumd-adapter:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/icatt-menselijk-digitaal/podiumd-adapter
+    pullPolicy: IfNotPresent
+    tag: "main-latest"
+  imagePullSecrets: []
+  nameOverride: ""
+  fullnameOverride: ""
+  service:
+    type: ClusterIP
+    port: 8080
+  ingress:
+    enabled: false
+    className: "nginx"
+    annotations:
+      {}
+    hosts:
+      - host: chart-example.local
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            serviceName:
+            servicePort:
+    tls: []
+  resources:
+    {}
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 100
+    targetCPUUtilizationPercentage: 80
+  nodeSelector: {}
+  tolerations: []
+  env:
+    config:
+      ESUITE_BASE_URL: "esuite-base-url"
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - podiumd-adapter
+          topologyKey: "kubernetes.io/hostname"
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  cronjobs: []
+
+jobs:
+  website:
+    enabled: true
+    name: "kiss-elastic-sync-job-website"
+    containerName: "kiss-elastic-sync"
+    image: "ghcr.io/klantinteractie-servicesysteem/kiss-elastic-sync"
+    imagePullPolicy: "Always"
+    args:
+      - "domain"
+      - "https://www.my-website.nl"
+    restartPolicy: "Never"
+
+cronJobs:
+  - name: "kiss-elastic-sync-job-vac"
+    schedule: "*/59 * * * *"
+    containerName: "kiss-elastic-sync"
+    image: "ghcr.io/klantinteractie-servicesysteem/kiss-elastic-sync"
+    imagePullPolicy: "Always"
+    args:
+      - "vac"
+    restartPolicy: "Never"
+  - name: "kiss-elastic-sync-job-smoelenboek"
+    schedule: "*/59 * * * *"
+    containerName: "kiss-elastic-sync"
+    image: "ghcr.io/klantinteractie-servicesysteem/kiss-elastic-sync"
+    imagePullPolicy: "Always"
+    args:
+      - "smoelenboek"
+    restartPolicy: "Never"
+  - name: "kiss-elastic-sync-job-kennisartikelen"
+    schedule: "*/59 * * * *"
+    containerName: "kiss-elastic-sync"
+    image: "ghcr.io/klantinteractie-servicesysteem/kiss-elastic-sync"
+    imagePullPolicy: "Always"
+    args: []
+    restartPolicy: "Never"

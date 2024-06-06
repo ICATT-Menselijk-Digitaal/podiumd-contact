@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kiss-config
+  namespace: {{ .Values.namespace }}
+data:
+  AFDELINGEN_BASE_URL: {{ .Values.AFDELINGEN_BASE_URL | quote }}
+  AFDELINGEN_OBJECT_TYPE_URL: {{ .Values.AFDELINGEN_OBJECT_TYPE_URL | quote }}
+  ASPNETCORE_ENVIRONMENT: {{ .Values.ASPNETCORE_ENVIRONMENT | quote }}
+  CONTACTMOMENTEN_API_CLIENT_ID: {{ .Values.CONTACTMOMENTEN_API_CLIENT_ID | quote }}
+  CONTACTMOMENTEN_BASE_URL: {{ .Values.CONTACTMOMENTEN_BASE_URL | quote }}
+  ELASTIC_BASE_URL: {{ .Values.ELASTIC_BASE_URL | quote }}
+  ELASTIC_USERNAME: {{ .Values.ELASTIC_USERNAME | quote }}
+  EMAIL_ENABLE_SSL: {{ .Values.EMAIL_ENABLE_SSL | quote }}
+  EMAIL_HOST: {{ .Values.EMAIL_HOST | quote }}
+  EMAIL_PORT: {{ .Values.EMAIL_PORT | quote }}
+  EMAIL_USERNAME: {{ .Values.EMAIL_USERNAME | quote }}
+  ENTERPRISE_SEARCH_BASE_URL: {{ .Values.ENTERPRISE_SEARCH_BASE_URL | quote }}
+  ENTERPRISE_SEARCH_ENGINE: {{ .Values.ENTERPRISE_SEARCH_ENGINE | quote }}
+  FEEDBACK_EMAIL_FROM: {{ .Values.FEEDBACK_EMAIL_FROM | quote }}
+  FEEDBACK_EMAIL_TO: {{ .Values.FEEDBACK_EMAIL_TO | quote }}
+  GROEPEN_BASE_URL: {{ .Values.GROEPEN_BASE_URL | quote }}
+  GROEPEN_OBJECT_TYPE_URL: {{ .Values.GROEPEN_OBJECT_TYPE_URL | quote }}
+  HAAL_CENTRAAL_BASE_URL: {{ .Values.HAAL_CENTRAAL_BASE_URL | quote }}
+  INTERNE_TAAK_BASE_URL: {{ .Values.INTERNE_TAAK_BASE_URL | quote }}
+  INTERNE_TAAK_OBJECT_TYPE_URL: {{ .Values.INTERNE_TAAK_OBJECT_TYPE_URL | quote }}
+  KLANTEN_BASE_URL: {{ .Values.KLANTEN_BASE_URL | quote }}
+  KLANTEN_CLIENT_ID: {{ .Values.KLANTEN_CLIENT_ID | quote }}
+  KVK_BASE_URL: {{ .Values.KVK_BASE_URL | quote }}
+  MEDEWERKER_OBJECTEN_BASE_URL: {{ .Values.MEDEWERKER_OBJECTEN_BASE_URL | quote }}
+  MEDEWERKER_OBJECTTYPES_BASE_URL: {{ .Values.MEDEWERKER_OBJECTTYPES_BASE_URL | quote }}
+  OIDC_AUTHORITY: {{ .Values.OIDC_AUTHORITY | quote }}
+  OIDC_CLIENT_ID: {{ .Values.OIDC_CLIENT_ID | quote }}
+  OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM: {{ .Values.OIDC_MEDEWERKER_IDENTIFICATIE_CLAIM | quote }}
+  OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE: {{ .Values.OIDC_MEDEWERKER_IDENTIFICATIE_TRUNCATE | quote }}
+  ORGANISATIE_IDS: {{ .Values.ORGANISATIE_IDS | quote }}
+  POSTGRES_DB: {{ .Values.POSTGRES_DB | quote }}
+  POSTGRES_HOST: {{ .Values.POSTGRES_HOST | quote }}
+  POSTGRES_USER: {{ .Values.POSTGRES_USER | quote }}
+  SDG_BASE_URL: {{ .Values.SDG_BASE_URL | quote }}
+  SDG_OBJECTEN_BASE_URL: {{ .Values.SDG_OBJECTEN_BASE_URL | quote }}
+  SDG_OBJECT_TYPE_URL: {{ .Values.SDG_OBJECT_TYPE_URL | quote }}
+  VAC_OBJECTEN_BASE_URL: {{ .Values.VAC_OBJECTEN_BASE_URL | quote }}
+  VAC_OBJECTTYPES_BASE_URL: {{ .Values.VAC_OBJECTTYPES_BASE_URL | quote }}
+  ZAKEN_API_CLIENT_ID: {{ .Values.ZAKEN_API_CLIENT_ID | quote }}
+  ZAKEN_BASE_URL: {{ .Values.ZAKEN_BASE_URL | quote }}
+  ZAAKSYSTEEM_DEEPLINK_URL: {{ .Values.ZAAKSYSTEEM_DEEPLINK_URL | quote }}
+  ZAAKSYSTEEM_DEEPLINK_PROPERTY: {{ .Values.ZAAKSYSTEEM_DEEPLINK_PROPERTY | quote }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podiumd-adapter-config
+  namespace: {{ .Values.namespace }}
+data:
+  IMAGE_TAG: {{ .Values.imageTag }}
+  INGRESS_HOST: {{ .Values.ingressHost }}
+  INGRESS_SECRET_NAME: {{ .Values.ingressSecretName }}
+  ESUITE_BASE_URL: {{ .Values.ESUITE_BASE_URL }}
+  ESUITE_CONTACTMOMENTEN_BASE_URL: {{ .Values.ESUITE_CONTACTMOMENTEN_BASE_URL }}
+  ESUITE_KLANTEN_BASE_URL: {{ .Values.ESUITE_KLANTEN_BASE_URL }}
+  CONTACTVERZOEK_TYPES__0: {{ .Values.contactVerzoekType1 }}
+  INTERNE_TAAK_OBJECT_TYPE_URL: {{ .Values.interneTaakObjectTypeUrl }}
+  AFDELINGEN_OBJECT_TYPE_URL: {{ .Values.afdelingenObjectTypeUrl }}
+  GROEPEN_OBJECT_TYPE_URL: {{ .Values.groepenObjectTypeUrl }}
+  SMOELENBOEK_OBJECT_TYPE_URL: {{ .Values.smoelenboekObjectTypeUrl }}
+  AFDELINGEN_BASE_URL: {{ .Values.afdelingenBaseUrl }}
+  GROEPEN_BASE_URL: {{ .Values.groepenBaseUrl }}
+  SMOELENBOEK_BASE_URL: {{ .Values.smoelenboekBaseUrl }}

@@ -1,0 +1,47 @@
+{{- if .Values.jobs.website.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Values.jobs.website.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Values.jobs.website.containerName }}
+          image: {{ .Values.jobs.website.image }}
+          imagePullPolicy: {{ .Values.jobs.website.imagePullPolicy }}
+          args: {{ .Values.jobs.website.args }}
+          envFrom:
+            - secretRef:
+                name: kiss-secrets
+            - configMapRef:
+                name: kiss-config
+      restartPolicy: {{ .Values.jobs.website.restartPolicy }}
+{{- end }}
+
+{{- range .Values.cronJobs }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .name }}
+  namespace: {{ $.Values.namespace }}
+spec:
+  schedule: "{{ .schedule }}"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: {{ .containerName }}
+              image: {{ .image }}
+              imagePullPolicy: {{ .imagePullPolicy }}
+              args: {{ .args }}
+              envFrom:
+                - secretRef:
+                    name: kiss-secrets
+                - configMapRef:
+                    name: kiss-config
+          restartPolicy: {{ .restartPolicy }}
+{{- end }}
