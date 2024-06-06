@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  podiumd-contact:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-06-06T15:10:45.9045381+02:00"
+    dependencies:
+    - name: kiss-frontend
+      repository: https://raw.githubusercontent.com/Klantinteractie-Servicesysteem/KISS-frontend/main/helm
+      version: 1.0.51
+    - name: podiumd-adapter
+      repository: https://raw.githubusercontent.com/ICATT-Menselijk-Digitaal/podiumd-adapter/main/helm
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: d5c5aef248d823cdc3b8d31100b4608b1e1335d44c88016823b73e219bfef527
+    name: podiumd-contact
+    type: application
+    urls:
+    - podiumd-contact-1.0.0-alpha.1.tgz
+    version: 1.0.0-alpha.1
+generated: "2024-06-06T15:10:45.8949742+02:00"
